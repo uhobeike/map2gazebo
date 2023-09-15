@@ -120,8 +120,8 @@ class MapConverter(object):
 
 def coords_to_loc(coords, metadata):
     x, y = coords
-    loc_x = x * metadata.resolution + metadata.origin.position.x
-    loc_y = y * metadata.resolution + metadata.origin.position.y
+    loc_x = x * metadata.resolution + 0
+    loc_y = y * metadata.resolution + 0
     # TODO: transform (x*res, y*res, 0.0) by Pose map_metadata.origin
     # instead of assuming origin is at z=0 with no rotation wrt map frame
     return np.array([loc_x, loc_y, 0.0])
